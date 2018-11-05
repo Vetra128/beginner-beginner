@@ -16,6 +16,7 @@ const App = () => import(/* webpackChunkName: "home" */'../containers/app').then
 const HomePage = () => import(/* webpackChunkName: "home" */'../pages/home').then(m => m.HomePage);
 const AboutPage = () => import(/* webpackChunkName: "about" */'../pages/about').then(m => m.AboutPage);
 const ListPage = () => import(/* webpackChunkName: "list" */'../pages/list').then(m => m.ListPage);
+const AnyDifferentPage = () => import(/* webpackChunkName: "list" */'../pages/any-different').then(m => m.AnyDifferentPage);
 
 /**
  * use router plugin.
@@ -33,6 +34,7 @@ export default new VueRouter({
         { path: '/home', component: HomePage },
         { path: '/about', component: AboutPage },
         { path: '/list', component: ListPage },
+        { path: '/any-different', component: AnyDifferentPage }
       ]
     }
   ]
